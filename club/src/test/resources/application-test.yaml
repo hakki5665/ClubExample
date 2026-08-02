@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+  liquibase:
+    enabled: false
+
+external:
+  services:
+    log:
+      url: http://localhost:58090/api/external/log
+    qr:
+      url: http://localhost:58090/api/qr/generate
+
+app:
+  api:
+    base-path: /api/club
